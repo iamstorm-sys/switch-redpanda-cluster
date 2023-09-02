@@ -1,2 +1,2 @@
-# switch-redpanda-cluster
-Switching between Redpadna Clusters usign NodeJs (Typescript)
+# nodejs-ts
+A NodeJs environment with Typescript support
