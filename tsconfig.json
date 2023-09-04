@@ -4,7 +4,7 @@
     "lib": [
       "es6"
     ],
-    "module": "NodeNext",
+    "module": "Node16",
     "rootDir": "src",
     "resolveJsonModule": true,
     "outDir": "dist",
@@ -13,7 +13,10 @@
     "strict": true,
     "sourceMap": true,
     "noImplicitAny": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "types": ["node"]
   },
   "ts-node": {
     // Tell ts-node CLI to install the --loader automatically

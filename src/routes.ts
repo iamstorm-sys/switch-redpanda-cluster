@@ -1,6 +1,7 @@
 import express, { Response, Request } from 'express';
 import { config } from 'dotenv';
-import * as controllers from './controllers/topic.js';
+import { controllers } from './controllers/index.ts';
+import { middlewares } from './middlewares/index.ts';
 
 
 config();
@@ -14,20 +15,22 @@ app.get('/health', (_: Request, res: Response) => {
 
 // // add your routes here
 
-// // admin operations
-// app.get('/cluster', )
+// admin operations
+app.get('/register',
+    middlewares.devOrProd,
+    // controllers.cluster.registerLocalClusters
+)
 // app.post('/cluster', )
 // app.put('/cluster',)
 // app.delete('/cluster')
 
 // // user Operations
 
+app.get('/clusters', controllers.cluster.list)
+
 app.post('/topic', controllers.topic.create)
 app.put('/topic', controllers.topic.update)
 app.delete('/topic', controllers.topic.delete)
-
-
-
 
 
 

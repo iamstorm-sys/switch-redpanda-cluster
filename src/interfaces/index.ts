@@ -13,3 +13,8 @@ export interface _I_CMD_Response {
     message: string;
     details?: string;
 }
+
+export interface _I_Cluster {
+    clusterId: string;
+    brokers?: string[];
+}

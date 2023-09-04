@@ -7,7 +7,7 @@ import { _I_CMD_Response } from "../interfaces/index.js";
 export const topic = {
     "create": async (req: Request): Promise<_I_CMD_Response> => {
 
-        const { topicName } = req.body;
+        const { topicName, clusterid } = req.body;
 
         const options: string[] = [];
 
